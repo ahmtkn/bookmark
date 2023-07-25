@@ -1,0 +1,28 @@
+{
+  "users": [
+    {
+      "username": "Ahmet Tekin",
+      "email": "ahmettekin3400@gmail.com",
+      "password": "123456",
+      "id": 1
+    },
+    {
+      "username": "Ahme",
+      "email": "ahmettekiinn00@gmail.com",
+      "password": "123456",
+      "id": 2
+    },
+    {
+      "username": "ahmetkn",
+      "email": "ahmet.tekin@tsoft.com.tr",
+      "password": "1234567",
+      "id": 3
+    },
+    {
+      "username": "ahmet",
+      "email": "ahmettekin@gmail.com",
+      "password": "12345678",
+      "id": 4
+    }
+  ]
+}
