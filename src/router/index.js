@@ -17,6 +17,11 @@ const routes = [
         path: '/register',
         component: () => import('@/views/RegisterPage.vue')
     },
+    {
+        name: 'NewBookmark',
+        path: '/new',
+        component: () => import('@/views/NewBoomark.vue')
+    },
 ];
 const router = createRouter({
     routes,

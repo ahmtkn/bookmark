@@ -1,10 +1,19 @@
 <template>
-  <div class="col-md-1">
+  <div class="col-md-2">
     <div class="sidebar">
-      <a class="active" href="#home">Home</a>
-      <a href="#news">News</a>
-      <a href="#contact">Contact</a>
-      <a href="#about">About</a>
+      <a class="" href="#" v-for="category in categories" :key="category.id" @click.prevent="$emit('getBookmarkByCategory', category.id)">{{ category.name }}</a>
     </div>
   </div>
 </template>
+<script>
+export default {
+  data() {
+    return {
+      categories: null,
+    }
+  },
+  mounted() {
+    this.$appAxios('/categories').then(response => this.categories = response.data);
+  }
+}
+</script>

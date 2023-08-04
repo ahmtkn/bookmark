@@ -5,16 +5,18 @@ const ls = new SecureLS({ isCompression: false });
 export default createStore({
     state: {
         user: null,
-        saltKey: "bookmark123456?"
+        saltKey: "bookmark123456?",
     },
     getters: {
         _isAuthenticated: state => state.user != null,
         _getCurrentUser(state){
             const user = state.user;
-            delete user.password;
+            user != null ? delete user.password: user;
             return user;
         },
-        _saltKey: state => state.saltKey
+        _saltKey: state => state.saltKey,
+        _userLikes: state => state.user?.likes || [],
+        _userBookmarks: state => state.user?.bookmarks || [],
     },
     mutations: {
         setUser(state, user) {
@@ -22,6 +24,12 @@ export default createStore({
         },
         logout(state){
             state.user = null;
+        },
+        setLikes(state, bookmarkIds) {
+            state.user.likes = bookmarkIds;
+        },
+        setBookmarks(state, bookmarkIds) {
+            state.user.bookmarks = bookmarkIds;
         }
     },
     plugins: [createPersistedState({

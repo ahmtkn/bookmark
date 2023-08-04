@@ -1,13 +1,34 @@
 <template>
   <AppHeader />
   <div class="row">
-    <SideBar />
-    <BookMarkList />
+    <SideBar @getBookmarkByCategory="getByCategory" :categories="categories"/>
+    <BookMarkList v-if="bookmarkLists.length > 0" :items="bookmarkLists" />
+    <div class="col-md-10" v-else>Data yok...</div>
   </div>
 </template>
 
-<script setup>
+<script>
 import BookMarkList from "@/components/appBookmarkList/BookMarkList.vue";
+export default {
+  data() {
+    return {
+      categories: null,
+      bookmarkLists: []
+    }
+  },
+  components:{
+    BookMarkList
+  },
+  mounted() {
+    this.$appAxios.get('/bookmarks?_expand=category').then(response => this.bookmarkLists = response?.data)
+  },
+  methods: {
+    getByCategory(categoryId) {
+      const url = categoryId ? (`/bookmarks?_expand=category&user&categoryId=${categoryId}`) : this.$appAxios.get(`/bookmarks?_expand=category&user`)
+      this.$appAxios.get(url).then(response => this.bookmarkLists = response?.data || []);
+    }
+  }
+}
 </script>
 
 <style>

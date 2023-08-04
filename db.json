@@ -2,19 +2,19 @@
   "users": [
     {
       "username": "Ahmet Tekin",
-      "email": "ahmettekin3400@gmail.com",
+      "email": "ahmettekin@gmail.com",
       "password": "123456",
       "id": 1
     },
     {
       "username": "Ahme",
-      "email": "ahmettekiinn00@gmail.com",
+      "email": "ahmettekiinn10@gmail.com",
       "password": "123456",
       "id": 2
     },
     {
       "username": "ahmetkn",
-      "email": "ahmet.tekin@tsoft.com.tr",
+      "email": "ahmet.tekin@gmail.com",
       "password": "1234567",
       "id": 3
     },
@@ -23,6 +23,160 @@
       "email": "ahmettekin@gmail.com",
       "password": "12345678",
       "id": 4
+    },
+    {
+      "username": "Ahmet Tek",
+      "email": "ahmet1@gmail.com",
+      "password": "123456",
+      "id": 5
+    },
+    {
+      "username": "test1",
+      "email": "test@gmail.com",
+      "password": "123456",
+      "id": 6
     }
-  ]
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "Back-End"
+    },
+    {
+      "id": 2,
+      "name": "Front-End"
+    },
+    {
+      "id": 3,
+      "name": "Fullstack"
+    },
+    {
+      "id": 4,
+      "name": "DevOps"
+    },
+    {
+      "id": 5,
+      "name": "Cloud"
+    }
+  ],
+  "bookmarks": [
+    {
+      "title": "Laravel",
+      "url": "https://laravel.com/",
+      "categoryId": 1,
+      "user_id": 1,
+      "description": "laravel bir php frameworküdür.",
+      "id": 1
+    },
+    {
+      "title": "Vue js",
+      "url": "https://vuejs.org/",
+      "categoryId": 2,
+      "user_id": 1,
+      "description": "vue js bir front-end frameworküdür.",
+      "id": 2
+    },
+    {
+      "title": "testset",
+      "url": "fdgsdgsd",
+      "categoryId": 3,
+      "user_id": 1,
+      "description": "sdgsdg",
+      "id": 3
+    },
+    {
+      "title": "sdfsdf",
+      "url": "sdgsdg",
+      "categoryId": 5,
+      "user_id": 1,
+      "description": "dsgsdgdsgdsg",
+      "id": 4
+    },
+    {
+      "title": "dsgdsg",
+      "url": "sdgsdgsd",
+      "categoryId": 5,
+      "user_id": 2,
+      "description": "dsgdsgds",
+      "id": 5
+    },
+    {
+      "title": "dgsdgsdg",
+      "url": "sdgsdgsd",
+      "categoryId": 2,
+      "user_id": 1,
+      "description": "dsgsdgds",
+      "id": 6
+    },
+    {
+      "title": "gdsgsdg",
+      "url": null,
+      "categoryId": 1,
+      "user_id": 2,
+      "description": "gsdgdsg",
+      "id": 7
+    },
+    {
+      "title": "Docker",
+      "url": "docker.com",
+      "categoryId": 4,
+      "description": "docker container",
+      "user_id": {
+        "username": "Ahmet Tekin",
+        "email": "ahmettekin3400@gmail.com",
+        "id": 1
+      },
+      "id": 8
+    },
+    {
+      "title": "php",
+      "url": "php.com",
+      "categoryId": 1,
+      "description": "php bir backend dilidir",
+      "user_id": {
+        "username": "Ahmet Tekin",
+        "email": "ahmettekin3400@gmail.com",
+        "id": 1
+      },
+      "id": 9
+    },
+    {
+      "title": "React",
+      "url": "react.com",
+      "categoryId": 2,
+      "description": "dsfdsgsdfsdg",
+      "user_id": {
+        "username": "Ahmet Tekin",
+        "email": "ahmettekin3400@gmail.com",
+        "id": 1
+      },
+      "id": 10
+    },
+    {
+      "title": "Go",
+      "url": "go.com",
+      "categoryId": 1,
+      "description": "dsfdsfsd",
+      "user_id": {
+        "username": "Ahmet Tekin",
+        "email": "ahmettekin3400@gmail.com",
+        "id": 1
+      },
+      "id": 11
+    },
+    {
+      "title": "dsfdsf",
+      "url": "sdfsdf",
+      "categoryId": 2,
+      "description": "sdgdsgdsg",
+      "user_id": {
+        "username": "Ahmet Tekin",
+        "email": "ahmettekin3400@gmail.com",
+        "id": 1
+      },
+      "id": 12
+    }
+  ],
+  "user_bookmarks": [],
+  "user_likes": []
 }
